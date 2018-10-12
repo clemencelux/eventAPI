@@ -5,6 +5,16 @@ var express = require('express'),
     Event = require('./api/models/eventModels.js'),
     bodyParser = require('body-parser');
 
+// CONNECT TO DB
+    mongoose.Promise = global.Promise;
+    mongoose.connect('mongodb://localhost/eventApi', { useNewUrlParser: true });
+
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.json());
+
+    var routes = require('./api/routes/eventRoutes.js');
+    routes(app);
+
 
 
 

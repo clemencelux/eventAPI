@@ -6,13 +6,12 @@ var ObjectId = Schema.Types.ObjectId;
 
 
 var EventsSchema = new Schema ({
+  cookieId: {
+    type : ObjectId
+  },
   name : {
     type: String,
     required: 'name of event'
-  },
-  cookieId: {
-    type : ObjectId,
-    required: true,
   },
   referrer: {
     type: String,

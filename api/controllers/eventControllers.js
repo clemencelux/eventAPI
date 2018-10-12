@@ -52,6 +52,6 @@ var mongoose = require('mongoose'),
       }, function (err, event) {
         if(err)
         res.send(err);
-        res.json(message: 'event deleted');
+        res.json({message: 'event deleted'});
       });
     };

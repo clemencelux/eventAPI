@@ -6,14 +6,14 @@ module.exports = function(app) {
 
 
 
-app.routes('/api/events')
-    .get(event.list_all_events)
-    .post(event.create_an_event);
+app.route('/api/events')
+    .get(Events.list_all_events)
+    .post(Events.create_an_event);
 
-app.routes('/api/events/:cookieId')
-    .get(event.read_an_event)
-    .put(event.update_an_event)
-    .delete(event.delete_an_event);
+app.route('/api/events/:cookieId')
+    .get(Events.read_an_event)
+    .put(Events.update_an_event)
+    .delete(Events.delete_an_event);
 
 
   };
